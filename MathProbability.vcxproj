@@ -136,6 +136,7 @@
     <ClInclude Include="Enums.h" />
     <ClInclude Include="InputValidation.h" />
     <ClInclude Include="MenuInterface.h" />
+    <ClInclude Include="ProgramFunctions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

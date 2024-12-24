@@ -4,6 +4,7 @@
 #include "Enums.h"
 #include "InputValidation.h"
 #include "MenuInterface.h"
+#include "ProgramFunctions.h"
 
 using namespace std;
 
@@ -17,7 +18,8 @@ int main(void) {
 	MainMenuItems UserChoice = static_cast<MainMenuItems>(0);
 
 	do {
-
+		cout << "[1] - Перейти к вводу" << endl 
+			 << "[2] - Выход" << endl;
 		cout << "Выберите пункт меню: ";
 		UserChoice = GetMainMenuItem();
 
@@ -25,7 +27,7 @@ int main(void) {
 
 		case StartProgram:
 			cout << "Выполнение программы" << endl;
-
+			GetInformation();
 			break;
 
 		case Quit:
@@ -36,7 +38,6 @@ int main(void) {
 			cout << "Введенный пункт отсутствует. Повторите ввод" << endl;
 		}
 	} while (UserChoice != Quit);
-
 
 	return EXIT_SUCCESS;
 }
