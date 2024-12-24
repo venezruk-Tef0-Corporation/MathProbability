@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="InputValidation.cpp" />
     <ClCompile Include="MenuInterface.cpp" />
+    <ClCompile Include="ProgramFunctions.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>

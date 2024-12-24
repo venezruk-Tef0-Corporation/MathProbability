@@ -24,12 +24,16 @@ int main(void) {
 		switch (UserChoice) {
 
 		case StartProgram:
+			cout << "Выполнение программы" << endl;
 
 			break;
 
 		case Quit:
 			cout << "Завершение работы" << endl;
 			break;
+		
+		default:
+			cout << "Введенный пункт отсутствует. Повторите ввод" << endl;
 		}
 	} while (UserChoice != Quit);
 
