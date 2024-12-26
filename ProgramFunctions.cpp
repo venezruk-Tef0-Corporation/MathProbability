@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <vector>
 #include <random>
 #include <ctime>
@@ -11,25 +11,25 @@ void GetInformation(void) {
 
 	int PlayersCounter = 0;
 
-	cout << "Ââåäèòå êîëè÷åñòâî ó÷àñòíèêîâ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑƒÑ‡Ð°ÑÑ‚Ð½Ð¸ÐºÐ¾Ð²: ";
 	PlayersCounter = GetInt();
 
 	vector<int> PlayersList;
 
 	for (int i = 0; i < PlayersCounter; i++) {
 
-		cout << "Ó÷àñòíèê " << i + 1 << endl;
+		cout << "Ð£Ñ‡Ð°ÑÑ‚Ð½Ð¸Ðº " << i + 1 << endl;
 
 		int PlayerImmersion = 0;
 
 		do {
-			cout << "Ââåäèòå ñòåïåíü ïîãðóæåííîñòè ó÷àñòíèêà ïî 10-áàëëüíîé øêàëå: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚ÐµÐ¿ÐµÐ½ÑŒ Ð¿Ð¾Ð³Ñ€ÑƒÐ¶ÐµÐ½Ð½Ð¾ÑÑ‚Ð¸ ÑƒÑ‡Ð°ÑÑ‚Ð½Ð¸ÐºÐ° Ð¿Ð¾ 10-Ð±Ð°Ð»Ð»ÑŒÐ½Ð¾Ð¹ ÑˆÐºÐ°Ð»Ðµ: ";
 
 			PlayerImmersion = GetInt();
 
 			if (PlayerImmersion < 0 or PlayerImmersion > 10) {
 
-				cout << "Îøèáêà ââîäà. Ïîâòîðèòå ââîä" << endl;
+				cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°. ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´" << endl;
 			}
 
 		} while (PlayerImmersion < 0 or PlayerImmersion > 10);
@@ -47,5 +47,5 @@ void GetInformation(void) {
 		ListOfDegrees.push_back(DegreeOfOutcome*100);
 	}
 
-	for (int i = 0; i < PlayersList.size(); i++) cout << "Ó÷àñòíèêó " << i + 1 << endl << "Ñïèñûâàþòñÿ äîëãè â ðàçìåðå " << ListOfDegrees[i] << "%" << endl;
+	for (int i = 0; i < PlayersList.size(); i++) cout << "Ð£Ñ‡Ð°ÑÑ‚Ð½Ð¸ÐºÑƒ " << i + 1 << endl << "Ð¡Ð¿Ð¸ÑÑ‹Ð²Ð°ÑŽÑ‚ÑÑ Ð´Ð¾Ð»Ð³Ð¸ Ð² Ñ€Ð°Ð·Ð¼ÐµÑ€Ðµ " << ListOfDegrees[i] << "%" << endl;
 }
