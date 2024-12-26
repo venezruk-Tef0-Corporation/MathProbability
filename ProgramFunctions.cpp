@@ -37,25 +37,15 @@ void GetInformation(void) {
 		PlayersList.push_back(PlayerImmersion);
 	}
 
-	vector<int> ListOfDegrees;
+	vector<double> ListOfDegrees;
 
 	for (int i = 0; i < PlayersList.size(); i++) {
 
 		double DegreeOfOutcome = PlayersList[i] / 10.0;
-		if (DegreeOfOutcome < 0.75) DegreeOfOutcome += (rand() % 30) / 100.0;
-
-		if (DegreeOfOutcome >= 0.75) {
-
-			ListOfDegrees.push_back(1);
-		}
-		else ListOfDegrees.push_back(0);
+		DegreeOfOutcome = 0.1 + (DegreeOfOutcome - 0.1) * (0.2 + ((rand() % 100) / 100.0) * 0.8);
+	
+		ListOfDegrees.push_back(DegreeOfOutcome*100);
 	}
 
-	for (int i = 0; i < ListOfDegrees.size(); i++) {
-
-		if (ListOfDegrees[i] == 1) PlayersList[i] = rand() % 12 + 1;
-		else PlayersList[i] = rand() % 12 + 13;
-	}
-
-	for (int i = 0; i < PlayersList.size(); i++) cout << "Участнику " << i + 1 << endl << "Достался билет №" << PlayersList[i] << endl;
+	for (int i = 0; i < PlayersList.size(); i++) cout << "Участнику " << i + 1 << endl << "Списываются долги в размере " << ListOfDegrees[i] << "%" << endl;
 }
